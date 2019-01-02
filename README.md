@@ -8,11 +8,10 @@
 
 <img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/grade2.png">  
 
+<img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/jp.png"> <img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/eo.png">  
+
 <img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/json.png">  
 
-<img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/jp.png">  
-
-<img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/eo.png">  
 
 
 ## Reliability of metrics:
