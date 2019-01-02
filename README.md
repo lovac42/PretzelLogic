@@ -1,6 +1,8 @@
 # Pretzel Logic: Retention Benchmarking
 
-<i>"In the computer industry, there are three kinds of lies: lies, damn lies, and benchmarks."</i> - <b>Eric Raymond</b>
+<i>"In the computer industry, there are three kinds of lies: lies, damn lies, and benchmarks."</i> - <b>Eric Raymond</b>  
+
+
 
 <img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/grade1.png">  
 
@@ -8,12 +10,16 @@
 
 <img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/json.png">  
 
+<img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/jp.png">  
+
+<img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/eo.png">  
+
 
 ## Reliability of metrics:
 http://supermemopedia.com/wiki/Spaced_repetition_algorithm_metric
 
 
-## Other Authors:
+## Credits:
 Idea based on "True Retention" - Strider  
 https://ankiweb.net/shared/info/613684242
 
