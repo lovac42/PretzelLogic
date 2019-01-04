@@ -3,7 +3,7 @@
 <i>"In the computer industry, there are three kinds of lies: lies, damn lies, and benchmarks."</i> - <b>Eric Raymond</b>  
 
 
-<img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/title.png">  
+<img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/title.jpg">  
 
 <img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/classic.png">  
 
