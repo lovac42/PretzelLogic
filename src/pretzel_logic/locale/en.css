@@ -1,0 +1,92 @@
+/**
+Copyright: (C) 2019 Lovac42
+Support: https://github.com/lovac42/PretzelLogic
+License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
+Version: 0.0.1
+*/
+
+
+.pretzel .name .retention:after{
+    content: "Retention:";
+}
+
+.pretzel .name .supermature:after{
+    content: "Supermature:";
+}
+
+.pretzel .name .passed:after{
+    content: "Passed:";
+}
+
+.pretzel .name .flunked:after{
+    content: "Flunked:";
+}
+
+.pretzel .name .newcard:after{
+    content: "New Cards:";
+}
+
+.pretzel .name .lapsed:after{
+    content: "Lapsed Cards:";
+}
+
+.pretzel .name .resched:after{
+    content: "Resched Cards:";
+}
+
+.footnote #passed_min:after{
+    content: "Retention can not be calculated with less than " attr(data-min) " passed reviews.";
+}
+
+.footnote #passed_max:after{
+    content: "The one's with " attr(data-max) " or more passed reviews are hilighted.";
+}
+
+.section.total .title:after{
+    content: "Total";
+}
+
+.section.mature .title:after{
+    content: "Mature ≥ " attr(data-ivl);
+}
+
+.section.young .title:after{
+    content: "Young < " attr(data-ivl);
+}
+
+.section.range .title:after{
+    content: "Range " attr(data-from) " - " attr(data-to);
+}
+
+#failed_grade_note:after{
+    content: "Note:";
+    font-weight: bold;
+}
+
+#failed_grade_msg:before{
+    content: "The threshold for failed grade has been set to "
+}
+#failed_grade[data-grade="2"]:after{
+    content: "Hard (2)."
+}
+#failed_grade[data-grade="3"]:after{
+    content: "Good (3)."
+}
+#failed_grade[data-grade="4"]:after{
+    content: "Easy (4)."
+}
+
+.pretzel.list tr td.title .day_offset:before{
+    content: " >>";
+}
+.pretzel.list tr td.title .day_offset:after{
+    content: "d";
+}
+
+
+#resched:before{
+    content: "Cards rescheduled today: ";
+}
+#resched:after{
+    content: attr(data-cnt)
+}

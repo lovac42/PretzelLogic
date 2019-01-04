@@ -1,0 +1,68 @@
+/**
+Copyright: (C) 2019 Lovac42
+Support: https://github.com/lovac42/PretzelLogic
+License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
+Version: 0.0.1
+*/
+
+
+.pretzel.list{
+    padding:0.65em;
+}
+
+.pretzel.list tr td.title{
+    text-align:center;
+    font-weight:bold;
+}
+
+.pretzel .name{
+    white-space:nowrap;
+    text-align:right;
+}
+
+.pretzel .value{
+    text-align:left;
+    font-weight:bold;
+    width:6em;
+}
+
+.pretzel .section{
+    text-align:center;
+    font-style:italic;
+    font-size:small;
+    color:gray;
+    padding-top:0.85em;
+}
+
+.pretzel .section.total{
+    text-decoration:underline;
+}
+
+.pretzel .tr_na{
+    font-style:italic;
+    font-weight:normal;
+}
+
+.pretzel .tr_hot{
+    color:maroon;
+}
+
+#pretzel_logic .footnote{
+    font-size:xx-small;
+    font-style:italic;
+    padding:1em;
+}
+
+#failed_note{
+    font-weight:bold;
+}
+
+.pretzel.list tr td.title .day_offset{
+    font-style:italic;
+    font-weight:normal;
+}
+
+.pretzel .hr{
+    color:gray;
+    border-top: 1px dotted;
+}

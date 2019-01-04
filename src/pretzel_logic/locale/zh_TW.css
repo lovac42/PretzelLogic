@@ -1,0 +1,91 @@
+/**
+Copyright: (C) 2019 Lovac42
+Support: https://github.com/lovac42/PretzelLogic
+License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
+Version: 0.0.1
+*/
+
+
+.pretzel .name .retention:after{
+    content: "保留:";
+}
+
+.pretzel .name .supermature:after{
+    content: "超級成熟:";
+}
+
+.pretzel .name .passed:after{
+    content: "通過:";
+}
+
+.pretzel .name .flunked:after{
+    content: "失敗:";
+}
+
+.pretzel .name .newcard:after{
+    content: "新卡:";
+}
+
+.pretzel .name .lapsed:after{
+    content: "失效卡:";
+}
+
+.pretzel .name .resched:after{
+    content: "改期卡片:";
+}
+
+.footnote #passed_min:after{
+    content: "如果通過的評論少於" attr(data-min) "次，則無法計算保留期。";
+}
+
+.footnote #passed_max:after{
+    content: "有" attr(data-max) "個或更多通過評論的人是高興的。";
+}
+
+.section.total .title:after{
+    content: "總";
+}
+
+.section.mature .title:after{
+    content: "成熟 ≥ " attr(data-ivl);
+}
+
+.section.young .title:after{
+    content: "年輕 < " attr(data-ivl);
+}
+
+.section.range .title:after{
+    content: "範圍 " attr(data-from) " - " attr(data-to);
+}
+
+#failed_grade_note:after{
+    content: "注意:";
+    font-weight: bold;
+}
+
+#failed_grade_msg:before{
+    content: "失敗等級的閾值已設置為"
+}
+#failed_grade[data-grade="2"]:after{
+    content: "難 (2)."
+}
+#failed_grade[data-grade="3"]:after{
+    content: "良好 (3)."
+}
+#failed_grade[data-grade="4"]:after{
+    content: "簡單 (4)."
+}
+
+.pretzel.list tr td.title .day_offset:before{
+    content: " >>";
+}
+.pretzel.list tr td.title .day_offset:after{
+    content: "天";
+}
+
+#resched:before{
+    content: "卡片今天重新安排了: ";
+}
+#resched:after{
+    content: attr(data-cnt)
+}

@@ -1,0 +1,28 @@
+{
+    "display_mode": "full",
+    "failed_grade": 1,
+    "pass_threshold": 20,
+    "highlight_threshold": 100,
+    "stylesheet": "default.css",
+    "interval_range": [21, 60],
+    "custom_ivl_range_between": [[10, 20]],
+    "timeframe": [{
+        "001": "Today:",
+        "014": "Past 2 weeks:",
+        "031": "Past month:"
+    },
+    {
+        "091": "Past 3 months:",
+        "182": "Past 6 months:",
+        "273": "Past 9 months:",
+        "365": "Past 1 year:"
+    },
+    {
+       "0182": "Past 6 months:",
+       "0365": "Past year:",
+       "0730": "Past 2 years:",
+       "1095": "Past 3 years:",
+        "inf": "All time:"
+    }],
+    "start_day_offset": 0
+}

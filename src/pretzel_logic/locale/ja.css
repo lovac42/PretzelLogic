@@ -1,0 +1,95 @@
+/**
+Copyright: (C) 2019 Lovac42
+Support: https://github.com/lovac42/PretzelLogic
+License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
+Version: 0.0.1
+*/
+
+
+/* Uncomment below for larger font size on Anki 2.0 with */
+
+/*
+.pretzel .name, .section .title, #failed_note, #failed_grade, #no_mature_card, #correct_answers_on{
+    font-size:larger;
+}
+
+.footnote #passed_min, #passed_max{
+    font-style:normal;
+    font-size:larger;
+}
+*/
+
+
+.pretzel .name .retention:after{
+    content: "保持:";
+}
+
+.pretzel .name .supermature:after{
+    content: "超熟:";
+}
+
+.pretzel .name .passed:after{
+    content: "合格:";
+}
+
+.pretzel .name .flunked:after{
+    content: "失敗しました:";
+}
+
+.pretzel .name .newcard:after{
+    content: "新しいカード:";
+}
+
+.pretzel .name .lapsed:after{
+    content: "経過カード:";
+}
+
+.pretzel .name .resched:after{
+    content: "再スケジュールカード:";
+}
+
+.footnote #passed_min:after{
+    content: "合格したレビューが" attr(data-min) "件未満の場合、保存期間は計算できません。";
+}
+
+.footnote #passed_max:after{
+    content: attr(data-max) "以上のレビューに合格したものはハイライト表示されます。";
+}
+
+.section.total .title:after{
+    content: "合計";
+}
+
+.section.mature .title:after{
+    content: "成熟した ≥ " attr(data-ivl);
+}
+
+.section.young .title:after{
+    content: "若い < " attr(data-ivl);
+}
+
+.section.range .title:after{
+    content: "範囲 " attr(data-from) " - " attr(data-to);
+}
+
+#failed_note:after{
+    content: "備考:";
+}
+
+#failed_grade:after{
+    content: "不合格グレードのしきい値は" attr(data-grade) "に設定されています。";
+}
+
+.pretzel.list tr td.title .day_offset:before{
+    content: " >>";
+}
+.pretzel.list tr td.title .day_offset:after{
+    content: "日";
+}
+
+#resched:before{
+    content: "本日再スケジュールされたカード: ";
+}
+#resched:after{
+    content: attr(data-cnt)
+}

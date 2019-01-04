@@ -1,0 +1,93 @@
+/**
+Copyright: (C) 2019 Lovac42
+Support: https://github.com/lovac42/PretzelLogic
+License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
+Version: 0.0.1
+*/
+
+
+.pretzel .name .retention:after{
+    content: "Retencion:";
+}
+
+.pretzel .name .supermature:after{
+    content: "Supermature:";
+}
+
+.pretzel .name .passed:after{
+    content: "Pasado:";
+}
+
+.pretzel .name .flunked:after{
+    content: "Suspendido:";
+}
+
+.pretzel .name .newcard:after{
+    content: "Tarjetas nuevas:";
+}
+
+.pretzel .name .lapsed:after{
+    content: "Lapsed Cards:";
+}
+
+.pretzel .name .resched:after{
+    content: "Tarjetas Replanteadas:";
+}
+
+.footnote #passed_min:after{
+    content: "La retención no se puede calcular con menos de " attr(data-min) " revisiones aprobadas.";
+}
+
+.footnote #passed_max:after{
+    content: "Los que tienen " attr(data-max) " o más críticas aprobadas son destacados.";
+}
+
+.section.total .title:after{
+    content: "Total";
+}
+
+.section.mature .title:after{
+    content: "Maduro ≥ " attr(data-ivl);
+}
+
+.section.young .title:after{
+    content: "Joven < " attr(data-ivl);
+}
+
+.section.range .title:after{
+    content: "Rango " attr(data-from) " - " attr(data-to);
+}
+
+#failed_grade_note:after{
+    content: "Nota:";
+    font-weight: bold;
+}
+
+
+#failed_grade_msg:before{
+    content: "El umbral para la calificación reprobada se ha establecido en "
+}
+#failed_grade[data-grade="2"]:after{
+    content: "difícil (2)."
+}
+#failed_grade[data-grade="3"]:after{
+    content: "bueno (3)."
+}
+#failed_grade[data-grade="4"]:after{
+    content: "fácil (4)."
+}
+
+.pretzel.list tr td.title .day_offset:before{
+    content: " >>";
+}
+.pretzel.list tr td.title .day_offset:after{
+    content: "d";
+}
+
+
+#resched:before{
+    content: "Tarjetas reprogramadas hoy: ";
+}
+#resched:after{
+    content: attr(data-cnt)
+}

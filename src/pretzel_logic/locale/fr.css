@@ -1,0 +1,91 @@
+/**
+Copyright: (C) 2019 Lovac42
+Support: https://github.com/lovac42/PretzelLogic
+License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
+Version: 0.0.1
+*/
+
+
+.pretzel .name .retention:after{
+    content: "Rétention:";
+}
+
+.pretzel .name .supermature:after{
+    content: "Supermature:";
+}
+
+.pretzel .name .passed:after{
+    content: "Passé:";
+}
+
+.pretzel .name .flunked:after{
+    content: "Raté:";
+}
+
+.pretzel .name .newcard:after{
+    content: "Nouvelles Cartes:";
+}
+
+.pretzel .name .lapsed:after{
+    content: "Cartes Perdues:";
+}
+
+.pretzel .name .resched:after{
+    content: "Cartes reprogrammées:";
+}
+
+.footnote #passed_min:after{
+    content: "La rétention ne peut pas être calculée avec moins de " attr(data-min) " avis passés.";
+}
+
+.footnote #passed_max:after{
+    content: "Ceux avec " attr(data-max) " commentaires passés ou plus sont mis en lumière.";
+}
+
+.section.total .title:after{
+    content: "Total";
+}
+
+.section.mature .title:after{
+    content: "Mature ≥ " attr(data-ivl);
+}
+
+.section.young .title:after{
+    content: "Jeune < " attr(data-ivl);
+}
+
+.section.range .title:after{
+    content: "Plage " attr(data-from) " - " attr(data-to);
+}
+
+#failed_grade_note:after{
+    content: "Remarque:";
+    font-weight: bold;
+}
+
+#failed_grade_msg:before{
+    content: "Le seuil d'échec a été défini sur "
+}
+#failed_grade[data-grade="2"]:after{
+    content: "Dur (2)."
+}
+#failed_grade[data-grade="3"]:after{
+    content: "Bon (3)."
+}
+#failed_grade[data-grade="4"]:after{
+    content: "Easy (4)."
+}
+
+.pretzel.list tr td.title .day_offset:before{
+    content: " >>";
+}
+.pretzel.list tr td.title .day_offset:after{
+    content: "d";
+}
+
+#resched:before{
+    content: "Cartes reportées aujourd'hui: ";
+}
+#resched:after{
+    content: attr(data-cnt)
+}
