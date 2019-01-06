@@ -22,6 +22,9 @@
 http://supermemopedia.com/wiki/Spaced_repetition_algorithm_metric
 
 
+## Classic View:
+In this mode, mature and supermature intervals are hard coded at 21 and 100 respectively. This is to comply with the classic view settings.
+
 ## Credits:
 Idea based on "True Retention" - Strider  
 https://ankiweb.net/shared/info/613684242

@@ -2,7 +2,7 @@
 # Copyright: (C) 2019 Lovac42
 # Support: https://github.com/lovac42/PretzelLogic
 # License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
-# Version: 0.0.1
+# Version: 0.0.2
 
 
 import os
@@ -17,8 +17,6 @@ from .config import *
 
 
 class PretzelLogic():
-    mature_ivl=DEFAULT_MATURE_IVL
-
     def __init__(self):
         self.config=Config(ADDON_NAME)
 
@@ -28,6 +26,7 @@ class PretzelLogic():
 
 
     def setup(self, type, lim):
+        self.mature_ivl=DEFAULT_MATURE_IVL
         self.type=type
         self.limit=" and "+lim if lim else ''
         self.olimit=self.limit #backup
@@ -122,7 +121,7 @@ class PretzelLogic():
     def _getMaturityList(self,span,quickMode=False):
         row=[]
         ivls=self.config.get('interval_range') #if deleted
-        ivls=ivls or DEFAULT_MATURE_IVL #if empty or deleted
+        ivls=ivls or (DEFAULT_MATURE_IVL,) #if empty or deleted
         for ivl in ivls:
             ar,pas,flk=getMatureSection(self.limit,span,ivl,
                     self.ease,self.threshold,self.highlight)
