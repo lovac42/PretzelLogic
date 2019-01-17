@@ -2,7 +2,7 @@
 # Copyright: (C) 2019 Lovac42
 # Support: https://github.com/lovac42/PretzelLogic
 # License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
-# Version: 0.0.2
+# Version: 0.0.3
 
 
 import os
@@ -143,12 +143,20 @@ class PretzelLogic():
         "Fix stats for total mature cards reviewed"
         span=self.getCutoff(1)
         ms=getMatureStats(self.olimit,span,self.mature_ivl,self.ease)
+        arr=stats.split('<br>')
+
+        nCnt=getLearned(self.olimit,span)
+        lCnt=getLearning(self.olimit,span)
+        sCnt=arr[-2].split(',')
+        sCnt[0]='<span id="newcnt">%d</span>, <span id="lrncnt">%d</span>'%(nCnt,lCnt)
+        arr[-2]=', '.join(sCnt)
+
         if ms:
-            arr=stats.split('<br>')
             msg=arr[-1].split(':')
             arr[-1]=msg[0]+ms
-            stats='<br>'.join(arr)
+        stats='<br>'.join(arr)
         resched=getResched(self.olimit,span)
         if resched:
             stats+='<br><span id="resched" data-cnt="%d"></span>'%resched
-        return stats
+        return '<div id="today_stats">'+stats+'''
+<div class="tooltip"></div></div>'''
