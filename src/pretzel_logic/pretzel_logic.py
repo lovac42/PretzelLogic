@@ -2,10 +2,10 @@
 # Copyright: (C) 2019 Lovac42
 # Support: https://github.com/lovac42/PretzelLogic
 # License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
-# Version: 0.0.3
+# Version: 0.0.4
 
 
-import os
+import os, re
 from aqt import mw
 from anki.lang import getLang
 from anki.hooks import addHook
@@ -144,19 +144,24 @@ class PretzelLogic():
         span=self.getCutoff(1)
         ms=getMatureStats(self.olimit,span,self.mature_ivl,self.ease)
         arr=stats.split('<br>')
+        if len(arr)<2: return stats #2.1 "no cards studied today"
 
+        #Fix new/lrn count
         nCnt=getLearned(self.olimit,span)
         lCnt=getLearning(self.olimit,span)
-        sCnt=arr[-2].split(',')
-        sCnt[0]='<span id="newcnt">%d</span>, <span id="lrncnt">%d</span>'%(nCnt,lCnt)
-        arr[-2]=', '.join(sCnt)
+        s=re.sub(r'\d+',str(lCnt),arr[-2],1)
+        arr[-2]='<span id="newcnt">%d</span>'%nCnt + s
 
+        #Fix mature stats for ease/mature ivl
         if ms:
             msg=arr[-1].split(':')
             arr[-1]=msg[0]+ms
         stats='<br>'.join(arr)
+
+        #Add ReMemorize stats
         resched=getResched(self.olimit,span)
         if resched:
             stats+='<br><span id="resched" data-cnt="%d"></span>'%resched
+
         return '<div id="today_stats">'+stats+'''
 <div class="tooltip"></div></div>'''

@@ -2,7 +2,8 @@
 Copyright: (C) 2019 Lovac42
 Support: https://github.com/lovac42/PretzelLogic
 License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
-Version: 0.0.2
+Version: 0.0.3
+Lang: English (Alternate texts)
 */
 
 
@@ -90,13 +91,12 @@ Version: 0.0.2
     content: attr(data-cnt)
 }
 
-
 #newcnt:before{
     content: "New: ";
     font-weight:normal;
 }
-#lrncnt:before{
-    content: "Learn: ";
+#newcnt:after{
+    content: ", ";
     font-weight:normal;
 }
 #today_stats .tooltip:before{
