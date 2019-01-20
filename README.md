@@ -10,6 +10,7 @@
 <img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/quick.png">  
 
 <img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/todayview.png">  
+*Tooltip on hover
 
 <img src="https://raw.githubusercontent.com/lovac42/PretzelLogic/master/screenshots/grade1.png">  
 
