@@ -2,7 +2,7 @@
 # Copyright: (C) 2019 Lovac42
 # Support: https://github.com/lovac42/PretzelLogic
 # License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
-# Version: 0.0.1
+# Version: 0.0.2
 
 # performance info:
 # https://www.sqlite.org/np1queryprob.html
@@ -19,10 +19,16 @@ from aqt import mw
 def getRelearned(lim, span):
     return getLearned(lim,span,type=2)
 
-def getLearned(lim, span, type=0):
+def getLearned(lim, span, type=0): #new, after final step
     return mw.col.db.first("""Select
 sum(case when type = ? and ivl > 0 then 1 else 0 end)
 from revlog where id > ? %s"""%lim,type,span)[0] or 0
+
+def getLearning(lim, span): #new learning
+    return mw.col.db.first("""Select
+sum(case when type = 0 and ivl < 0 then 1 else 0 end)
+from revlog where id > ? %s"""%lim,span)[0] or 0
+
 
 def getFlunkedLessThan(lim, span, toIvl, ease):
     return mw.col.db.first("""Select

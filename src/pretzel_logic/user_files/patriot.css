@@ -2,7 +2,7 @@
 Copyright: (C) 2019 Lovac42
 Support: https://github.com/lovac42/PretzelLogic
 License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
-Version: 0.0.1
+Version: 0.0.3
 */
 
 
@@ -65,4 +65,24 @@ Version: 0.0.1
 .pretzel.list tr td.title .day_offset{
     font-style:italic;
     font-weight:normal;
+}
+
+#newcnt{
+    font-weight:bold;
+}
+
+#today_stats:hover .tooltip{
+    display:block;
+}
+#today_stats .tooltip{
+    display:none;
+    background-color:#FFFFCC;
+    color:red;
+    text-align:center;
+    border-radius:8px;
+    padding:5px 5px;
+    position:absolute;
+    left:40%;
+    z-index:1;
+    opacity:0.7;
 }
