@@ -1,0 +1,105 @@
+/**
+Copyright: (C) 2019 Lovac42
+Support: https://github.com/lovac42/PretzelLogic
+License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
+Version: 0.0.3
+Lang: Esperanto
+*/
+
+
+.pretzel .name .retention:after{
+    content: "Retención:";
+}
+
+.pretzel .name .supermature:after{
+    content: "Supermatura:";
+}
+
+.pretzel .name .passed:after{
+    content: "Pasita:";
+}
+
+.pretzel .name .flunked:after{
+    content: "Flunked:";
+}
+
+.pretzel .name .newcard:after{
+    content: "Novaj Kartoj:";
+}
+
+.pretzel .name .lapsed:after{
+    content: "Karto Liberigita:";
+}
+
+.pretzel .name .resched:after{
+    content: "Kartoj Renovigitaj:";
+}
+
+.footnote #passed_min:after{
+    content: "Retención ne povas esti kalkulita kun malpli ol " attr(data-min) " pasintaj revizioj.";
+}
+
+.footnote #passed_max:after{
+    content: "La unu kun " attr(data-max) " aŭ pli preterpasitaj revizioj estas bonkvalitaj.";
+}
+
+.section.total .title:after{
+    content: "Tuta";
+}
+
+.section.mature .title:after{
+    content: "Matura ≥ " attr(data-ivl);
+}
+
+.section.young .title:after{
+    content: "Juna < " attr(data-ivl);
+}
+
+.section.range .title:after{
+    content: "Rango " attr(data-from) " - " attr(data-to);
+}
+
+#failed_grade_note:after{
+    content: "Noto:";
+    font-weight: bold;
+}
+
+#failed_grade_msg:before{
+    content: "La sojlo por malsukcesa grado estis "
+}
+#failed_grade[data-grade="2"]:after{
+    content: "malfacila (2)."
+}
+#failed_grade[data-grade="3"]:after{
+    content: "fiksita al bona (3)."
+}
+#failed_grade[data-grade="4"]:after{
+    content: "facile facila (4)."
+}
+
+.pretzel.list tr td.title .day_offset:before{
+    content: " >>";
+}
+.pretzel.list tr td.title .day_offset:after{
+    content: "d";
+}
+
+#resched:before{
+    content: "Kartoj resenditaj hodiaŭ: ";
+}
+#resched:after{
+    content: attr(data-cnt)
+}
+
+
+#newcnt:before{
+    content: "Nova: ";
+    font-weight:normal;
+}
+#newcnt:after{
+    content: ", ";
+    font-weight:normal;
+}
+#today_stats .tooltip:before{
+    content: "Lernu kaj publikigi kalkulon inkluzivas ĉiujn lernajn paŝojn.";
+}

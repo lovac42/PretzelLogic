@@ -1,0 +1,106 @@
+/**
+Copyright: (C) 2019 Lovac42
+Support: https://github.com/lovac42/PretzelLogic
+License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
+Version: 0.0.3
+Lang: Deutsch
+*/
+
+
+.pretzel .name .retention:after{
+    content: "Aufbewahrung:";
+}
+
+.pretzel .name .supermature:after{
+    content: "Supermature:";
+}
+
+.pretzel .name .passed:after{
+    content: "Bestanden:";
+}
+
+.pretzel .name .flunked:after{
+    content: "Durchgefallen:";
+}
+
+.pretzel .name .newcard:after{
+    content: "Neue Karten:";
+}
+
+.pretzel .name .lapsed:after{
+    content: "Abgelaufene Karten:";
+}
+
+.pretzel .name .resched:after{
+    content: "Karten verschoben:";
+}
+
+.footnote #passed_min:after{
+    content: "Bei weniger als " attr(data-min) " abgegebenen Bewertungen kann die Retention nicht berechnet werden.";
+}
+
+.footnote #passed_max:after{
+    content: "Diejenigen mit " attr(data-max) " oder mehr bestandenen Bewertungen werden hervorgehoben.";
+}
+
+.section.total .title:after{
+    content: "Gesamt";
+}
+
+.section.mature .title:after{
+    content: "Reifen ≥ " attr(data-ivl);
+}
+
+.section.young .title:after{
+    content: "Jung < " attr(data-ivl);
+}
+
+.section.range .title:after{
+    content: "Bereich " attr(data-from) " - " attr(data-to);
+}
+
+#failed_grade_note:after{
+    content: "Hinweis:";
+    font-weight: bold;
+}
+
+#failed_grade_msg:before{
+    content: "Die Schwelle für die Note \"Nicht bestanden\" wurde auf "
+}
+#failed_grade[data-grade="2"]:after{
+    content: "hart (2) gesetzt."
+}
+#failed_grade[data-grade="3"]:after{
+    content: "gut (3) gesetzt."
+}
+#failed_grade[data-grade="4"]:after{
+    content: "einfach (4) gesetzt."
+}
+
+.pretzel.list tr td.title .day_offset:before{
+    content: " >>";
+}
+.pretzel.list tr td.title .day_offset:after{
+    content: "d";
+}
+
+
+#resched:before{
+    content: "Karten heute verschoben: ";
+}
+#resched:after{
+    content: attr(data-cnt)
+}
+
+
+#newcnt:before{
+    content: "nieuwe: ";
+    font-weight:normal;
+}
+#newcnt:after{
+    content: ", ";
+    font-weight:normal;
+}
+#today_stats .tooltip:before{
+    content: "Leren en opnieuw leren tellen omvat alle leerstappen.";
+}
