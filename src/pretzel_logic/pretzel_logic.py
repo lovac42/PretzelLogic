@@ -2,13 +2,12 @@
 # Copyright: (C) 2019 Lovac42
 # Support: https://github.com/lovac42/PretzelLogic
 # License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
-# Version: 0.0.4
 
 
 import os, re
 from aqt import mw
-from anki.lang import getLang
 from anki.hooks import addHook
+from anki.lang import currentLang
 from .utils import *
 from .stats import *
 from .db import *
@@ -45,7 +44,7 @@ class PretzelLogic():
 
 
     def getStyleSheet(self):
-        lang=getLang()+'.css'
+        lang = currentLang +'.css'
         fname=os.path.join('locale',lang)
         loc=self.config.readFile(fname,False)
         if not loc:
