@@ -48,7 +48,7 @@ class PretzelLogic():
         fname=os.path.join('locale',lang)
         loc=self.config.readFile(fname,False)
         if not loc:
-            fname=os.path.join('locale','en.css')
+            fname=os.path.join('locale','en_US.css')
             loc=self.config.readFile(fname,False)
         fname=self.config.get('stylesheet',DEFAULT_STYLESHEET)
         css=self.config.readFile(fname,False)
