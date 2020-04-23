@@ -4,10 +4,14 @@
 # License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
 
 
-from anki import version
-ANKI21=version.startswith("2.1.")
+import os
+ADDON_PATH = os.path.dirname(__file__)
 
 ADDON_NAME='PretzelLogic'
+
+TARGET_STABLE_VERSION = 23
+
+
 
 DEFAULT_FAILED_GRADE=1
 
