@@ -1,4 +1,5 @@
 {
+    "menu_name": "&Study",
     "display_mode": "full",
     "failed_grade": 1,
     "pass_threshold": 20,

@@ -1,5 +1,8 @@
 # Pretzel Logic: Retention Benchmarking
 
+## menu_name
+Name of menu item. Default to Study menu. (Requires restart)
+
 ## display_mode
 Allows quickly changing of display views.  
 Options include:  
