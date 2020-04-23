@@ -12,17 +12,21 @@
 
 # Some credit should be attributed to Damien Elmes for the original methods leading to this development.
 
-# Note: This work is not built upon the aforementioned works, but a complete rewrite with those ideas included and licensed under GNU GPL, version 3 or later. There is no fuzz on authorship here.
+# Note: This addon is not built upon the aforementioned works, but a complete rewrite with those ideas included and licensed under GNU GPL, version 3 or later. There is no fuzz on authorship here.
 
 
 import anki.stats
 from anki.hooks import wrap
+
+from .const import ADDON_NAME
+from .config import *
 from .pretzel_logic import *
 from .menuitem import *
 
 
-pl=PretzelLogic()
-mi=MenuItem(pl.config)
+conf = Config(ADDON_NAME)
+pl = PretzelLogic(conf)
+mi = MenuItem(conf)
 
 
 def todayStats(stat, _old):

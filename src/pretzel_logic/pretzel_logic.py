@@ -7,17 +7,18 @@
 import os, re
 from aqt import mw
 from anki.hooks import addHook
-from anki.lang import currentLang
+
 from .utils import *
 from .stats import *
 from .db import *
 from .const import *
-from .config import *
+
+from .lib.com.lovac42.anki.backend.lang import getLang
 
 
-class PretzelLogic():
-    def __init__(self):
-        self.config=Config(ADDON_NAME)
+class PretzelLogic:
+    def __init__(self, conf):
+        self.config = conf
 
 
     def getCutoff(self, days):
@@ -44,15 +45,15 @@ class PretzelLogic():
 
 
     def getStyleSheet(self):
-        lang = currentLang +'.css'
-        fname=os.path.join('locale',lang)
-        loc=self.config.readFile(fname,False)
+        lang=getLang() + ".css"
+        fname=os.path.join("locale", lang)
+        loc=self.config.readFile(fname, False)
         if not loc:
-            fname=os.path.join('locale','en_US.css')
-            loc=self.config.readFile(fname,False)
-        fname=self.config.get('stylesheet',DEFAULT_STYLESHEET)
-        css=self.config.readFile(fname,False)
-        return """<style>%s %s</style>"""%(loc,css)
+            fname=os.path.join('locale', 'en_US.css')
+            loc=self.config.readFile(fname, False)
+        fname=self.config.get('stylesheet', DEFAULT_STYLESHEET)
+        css=self.config.readFile(fname, False)
+        return """<style>%s %s</style>"""%(loc, css)
 
 
     def getFootNote(self):
