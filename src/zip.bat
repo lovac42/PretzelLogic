@@ -3,7 +3,7 @@ set ZIP=C:\PROGRA~1\7-Zip\7z.exe a -tzip -y -r
 set REPO=pretzel_logic
 set NAME=pretzel_logic
 set PACKID=1168065472
-set VERSION=0.0.6
+set VERSION=0.1.0
 
 
 echo %VERSION% >%REPO%\VERSION
