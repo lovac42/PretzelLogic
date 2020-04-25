@@ -2,7 +2,7 @@
 Copyright: (C) 2019 Lovac42
 Support: https://github.com/lovac42/PretzelLogic
 License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
-Version: 0.0.3
+Version: 0.0.4
 */
 
 
@@ -85,4 +85,15 @@ Version: 0.0.3
     left:40%;
     z-index:1;
     opacity:0.7;
+}
+
+
+
+.nightMode .pretzel .tr_hot, .night_mode .pretzel .tr_hot {
+    color: #5CcC00;
+}
+
+.nightMode #today_stats .tooltip, .night_mode #today_stats .tooltip{
+    background-color:#77ccff;
+    color:white;
 }
