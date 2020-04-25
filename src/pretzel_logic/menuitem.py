@@ -7,18 +7,25 @@
 from aqt import mw
 from aqt.qt import *
 from aqt.utils import getText
+from anki.hooks import addHook
 
 from .const import ADDON_NAME
 from .lib.com.lovac42.anki.gui import toolbar
 
 
 class MenuItem:
+    _loaded = False
+
     def __init__(self, config):
         self.config = config
-        self.setupMenu()
+        addHook(ADDON_NAME+".configLoaded", self.setupMenu)
 
 
     def setupMenu(self):
+        if self._loaded:
+            return
+        self._loaded = True
+
         m_name = self.config.get("menu_name", "&Study")
         menu = toolbar.getMenu(mw, m_name)
 
